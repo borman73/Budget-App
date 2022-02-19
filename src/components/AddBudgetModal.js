@@ -6,7 +6,7 @@ export default function AddBudgetModal({ show, handleClose }) {
 
   const nameRef = useRef();
   const maxRef = useRef();
-  const {addBudget} = useBudgets();
+  const { addBudget } = useBudgets();
 
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -20,7 +20,7 @@ export default function AddBudgetModal({ show, handleClose }) {
   };
 
   return (
-    <Modal show= {show} onHide={handleClose}>
+    <Modal show={show} onHide={handleClose}>
       <Form onSubmit={handleSubmit}>
         <Modal.Header closeButton>
           <Modal.Title>New Budget</Modal.Title>
@@ -34,8 +34,8 @@ export default function AddBudgetModal({ show, handleClose }) {
             <Form.Label>Maximum Spending</Form.Label>
             <Form.Control type='number' required min='0' step={0.01} ref={maxRef} />
           </Form.Group>
-          <div className='d-flex justify-content-end '>
-            <Button variant='primary'type='submit'>Add</Button>
+          <div className='d-flex justify-content-end'>
+            <Button variant='primary' type='submit'>Add</Button>
           </div>
         </Modal.Body>
       </Form>
