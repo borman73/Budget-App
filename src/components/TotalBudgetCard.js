@@ -8,5 +8,5 @@ export default function TotalBudgetCard() {
   const max = budgets.reduce((total, budget) => total + budget.max, 0)
   if (max === 0) return null
 
-  return <BudgetCard gray name='Total' amount={amount} max={max} />
+  return <BudgetCard gray name='Total' amount={amount} max={max} hideButtons />
 };
